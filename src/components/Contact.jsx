@@ -1,47 +1,52 @@
 const Contact = () => {
     return (
-      <section id="contacto" className="py-24 px-6 bg-white/50">
-        <div className="max-w-3xl mx-auto">
+      <section id="contacto" className="py-24 px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
           
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl font-black text-gray-900 uppercase tracking-tighter">
-              ¿Tienes un <span className="text-emerald-600">Proyecto?</span>
+          {/* Cabecera del formulario */}
+          <div className="mb-16">
+            <h2 className="font-raleway text-xs font-bold uppercase tracking-[0.5em] text-emerald-700 mb-4">
+              Contacto
             </h2>
-            <p className="text-gray-500 mt-4">Hablemos sobre cómo podemos trabajar juntos.</p>
+            <p className="font-raleway text-3xl md:text-5xl font-light text-gray-800 leading-tight">
+              ¿Tienes una idea en mente? <br />
+              <span className="italic">Escríbeme.</span>
+            </p>
           </div>
   
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex flex-col">
-                <label className="text-xs font-bold uppercase text-gray-400 mb-2 ml-4">Nombre</label>
-                <input 
-                  type="text" 
-                  className="bg-white border border-gray-200 p-4 rounded-2xl focus:outline-none focus:border-emerald-500 transition-colors shadow-sm"
-                  placeholder="Tu nombre..."
-                />
-              </div>
-              <div className="flex flex-col">
-                <label className="text-xs font-bold uppercase text-gray-400 mb-2 ml-4">Email</label>
-                <input 
-                  type="email" 
-                  className="bg-white border border-gray-200 p-4 rounded-2xl focus:outline-none focus:border-emerald-500 transition-colors shadow-sm"
-                  placeholder="tu@email.com"
-                />
-              </div>
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            <div className="flex flex-col border-b border-gray-200 pb-2 focus-within:border-emerald-600 transition-colors">
+              <label className="font-raleway text-[10px] uppercase tracking-widest text-gray-400 mb-2">Nombre</label>
+              <input 
+                type="text" 
+                className="font-raleway text-gray-800 bg-transparent outline-none py-2 font-light"
+                placeholder="Tu nombre"
+              />
             </div>
   
-            <div className="flex flex-col">
-              <label className="text-xs font-bold uppercase text-gray-400 mb-2 ml-4">Mensaje</label>
+            <div className="flex flex-col border-b border-gray-200 pb-2 focus-within:border-emerald-600 transition-colors">
+              <label className="font-raleway text-[10px] uppercase tracking-widest text-gray-400 mb-2">Email</label>
+              <input 
+                type="email" 
+                className="font-raleway text-gray-800 bg-transparent outline-none py-2 font-light"
+                placeholder="hola@tuemail.com"
+              />
+            </div>
+  
+            <div className="flex flex-col md:col-span-2 border-b border-gray-200 pb-2 focus-within:border-emerald-600 transition-colors">
+              <label className="font-raleway text-[10px] uppercase tracking-widest text-gray-400 mb-2">Mensaje</label>
               <textarea 
-                rows="5"
-                className="bg-white border border-gray-200 p-4 rounded-2xl focus:outline-none focus:border-emerald-500 transition-colors shadow-sm resize-none"
-                placeholder="Cuéntame tu idea..."
+                rows="4"
+                className="font-raleway text-gray-800 bg-transparent outline-none py-2 font-light resize-none"
+                placeholder="Cuéntame sobre tu proyecto..."
               ></textarea>
             </div>
   
-            <button className="w-full bg-gray-900 text-white font-bold py-4 rounded-2xl hover:bg-emerald-600 transition-all shadow-lg shadow-gray-200">
-              Enviar Mensaje
-            </button>
+            <div className="md:col-span-2 mt-8">
+              <button className="font-raleway text-xs uppercase tracking-[0.3em] bg-gray-900 text-white px-12 py-5 rounded-sm hover:bg-emerald-700 transition-all duration-500 shadow-lg shadow-gray-200">
+                Enviar Propuesta
+              </button>
+            </div>
           </form>
   
         </div>

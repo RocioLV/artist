@@ -1,20 +1,25 @@
 const ArtCard = ({ title, category, image }) => {
     return (
-      <div 
-        onClick={() => alert(`Pieza seleccionada: ${title}`)}
-        className="group relative overflow-hidden rounded-2xl bg-gray-900 transition-all hover:-translate-y-2 cursor-pointer shadow-2xl"
-      >
-        <div className="aspect-[4/5] w-full overflow-hidden">
+      <div className="group cursor-pointer">
+        {/* Contenedor de Imagen con bordes más suaves o rectos para minimalismo */}
+        <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-gray-100 mb-4">
           <img 
             src={image} 
             alt={title}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
+          {/* Un sutil overlay que solo aparece al hacer hover */}
+          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
-          <p className="text-purple-400 text-xs font-bold tracking-widest uppercase mb-1">{category}</p>
-          <h3 className="text-white text-xl font-bold">{title}</h3>
+  
+        {/* Información de la Obra: Raleway en estado puro */}
+        <div className="flex flex-col gap-1">
+          <span className="font-raleway text-[10px] uppercase tracking-[0.3em] text-emerald-700 font-bold">
+            {category}
+          </span>
+          <h3 className="font-raleway text-lg font-light text-gray-800 tracking-wide group-hover:text-emerald-900 transition-colors">
+            {title}
+          </h3>
         </div>
       </div>
     )

@@ -1,24 +1,22 @@
 const Navbar = () => {
     return (
-      // bg-white/70 + backdrop-blur: Crea el efecto de vidrio sobre el fondo claro
-      // border-b: Una línea muy sutil abajo para separar el nav del contenido
-      <nav className="flex justify-between items-center p-6 bg-white/70 backdrop-blur-lg border-b border-gray-100 fixed top-0 w-full z-50">
+      <nav className="flex justify-between items-center px-8 py-6 bg-[#F9F9F7]/80 backdrop-blur-md fixed top-0 w-full z-50">
         
-        {/* LOGO: Ahora en gris oscuro con el detalle en esmeralda */}
-        <div className="text-gray-900 font-display font-black text-2xl tracking-tighter">
-          ROCÍO<span className="text-emerald-600">.</span>
+        {/* LOGO: Raleway en peso 700 para que destaque sutilmente */}
+        <div className="font-raleway font-bold text-xl tracking-[0.2em] text-gray-900">
+          ROCÍO<span className="text-emerald-600 font-light">LORCA</span>
         </div>
   
-        {/* LINKS: Gris medio que cambia a esmeralda al pasar el mouse */}
-        <div className="hidden md:flex gap-10 text-gray-600 font-medium tracking-wide uppercase text-xs">
-          <a href="#" className="hover:text-emerald-600 transition-colors">Inicio</a>
-          <a href="#galeria" className="hover:text-emerald-600 transition-colors">Galería</a>
-          <a href="#contacto" className="hover:text-emerald-600 transition-colors">Contacto</a>
+        {/* MENÚ: Muy minimalista, texto pequeño y espaciado */}
+        <div className="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.4em] font-raleway font-semibold text-gray-500">
+          <a href="#" className="hover:text-gray-900 transition-colors">Inicio</a>
+          <a href="#galeria" className="hover:text-gray-900 transition-colors">Galería</a>
+          <a href="#contacto" className="hover:text-gray-900 transition-colors">Contacto</a>
         </div>
   
-        {/* BOTÓN: Mantener el esmeralda pero con una sombra más suave */}
-        <button className="bg-emerald-600 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-600/20">
-          Hablemos
+        {/* BOTÓN: En lugar de un botón sólido, usaremos uno con borde fino (Ghost Button) */}
+        <button className="font-raleway text-[10px] uppercase tracking-[0.3em] border border-gray-200 px-6 py-2 rounded-full hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300">
+          Mensaje
         </button>
   
       </nav>

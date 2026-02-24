@@ -8,21 +8,21 @@ const Gallery = () => {
   ]
 
   return (
-    <section id="galeria" className="py-20 px-6 max-w-7xl mx-auto">
-      <div className="mb-12 text-center">
-        {/* Cambiamos text-white por text-gray-900 */}
-        <h2 className="text-3xl font-bold text-gray-900">Obras</h2>
-        <p className="text-gray-600 mt-2">Mis últimas obras</p>
+    <section id="galeria" className="py-24 px-6 max-w-7xl mx-auto">
+      {/* Encabezado de la Galería */}
+      <div className="mb-20 text-center">
+        <h2 className="font-raleway text-xs md:text-sm font-bold text-gray-400 uppercase tracking-[0.5em] mb-4">
+          Selección de Obras
+        </h2>
+        <p className="font-raleway text-1xl md:text-2xl font-light text-gray-800 tracking-tight">
+          GALERÍA
+        </p>
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {/* Grid de imágenes */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {artworks.map((art) => (
-          <ArtCard 
-            key={art.id} 
-            title={art.title} 
-            category={art.category} 
-            image={art.image} 
-          />
+          <ArtCard key={art.id} {...art} />
         ))}
       </div>
     </section>
