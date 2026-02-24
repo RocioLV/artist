@@ -11,7 +11,7 @@ const Gallery = () => {
     <section id="galeria" className="py-20 px-6 max-w-7xl mx-auto">
       <div className="mb-12 text-center">
         {/* Cambiamos text-white por text-gray-900 */}
-        <h2 className="text-4xl font-bold text-gray-900">Galería</h2>
+        <h2 className="text-3xl font-bold text-gray-900">Obras</h2>
         <p className="text-gray-600 mt-2">Mis últimas obras</p>
       </div>
       
