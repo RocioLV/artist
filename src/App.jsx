@@ -1,20 +1,28 @@
-// src/App.jsx
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Gallery from './components/Gallery'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer'; 
+import Home from './pages/Home';
+import Archive from './pages/Archive'; // 1. IMPORTA EL ARCHIVO REAL AQUÍ
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#F9F9F7] text-gray-900">
-      <Navbar />
-      <Hero />
-      <Gallery />
-      <Contact />
-      <Footer />
-    </div>
-  )
+    <Router>
+      <div className="bg-[#F9F9F7] min-h-screen flex flex-col">
+        <Navbar /> 
+        
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            
+            {/* 2. AHORA SÍ USARÁ EL COMPONENTE COMPLETO */}
+            <Route path="/archivo" element={<Archive />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { artworksData } from '../data/artworks';
+import { Link } from 'react-router-dom';
 import ArtCard from './ArtCard';
 
 const Gallery = () => {
@@ -51,12 +52,15 @@ const Gallery = () => {
 
       </div>
 
-      {/* Botón Ver Más */}
-      <div className="mt-80 flex justify-center">
-        <button className="font-raleway text-[10px] uppercase tracking-[0.5em] border border-gray-200 px-12 py-6 hover:bg-gray-900 hover:text-white transition-all duration-500">
-          Explorar Archivo Completo
-        </button>
-      </div>
+        {/* Botón actualizado */}
+        <div className="mt-80 flex justify-center">
+        <Link 
+            to="/archivo" 
+            className="font-raleway text-[10px] uppercase tracking-[0.5em] border border-gray-200 px-12 py-6 hover:bg-gray-900 hover:text-white transition-all duration-500 inline-block"
+        >
+            Explorar Archivo Completo
+        </Link>
+        </div>
 
       {/* MODAL (Versión 1: Elegante y contenido) */}
       {selectedArt && (

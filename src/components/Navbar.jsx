@@ -1,26 +1,33 @@
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
-    return (
-      <nav className="flex justify-between items-center px-8 py-6 bg-[#F9F9F7]/80 backdrop-blur-md fixed top-0 w-full z-50">
+  return (
+    <nav className="fixed top-0 w-full z-[50] bg-[#F9F9F7]/80 backdrop-blur-sm px-6 py-8">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
         
-        {/* LOGO: Raleway en peso 700 para que destaque sutilmente */}
-        <div className="font-raleway font-semi-bold text-xl tracking-[0.2em] text-gray-900">
-          i<span className="text-emerald-600 font-light">am</span>rocío
+        {/* Logo: Ahora te lleva al inicio siempre */}
+        <Link to="/" className="font-raleway text-sm font-bold tracking-[0.3em] text-gray-800">
+          I.AM.ROCÍO
+        </Link>
+
+        <div className="flex gap-10">
+          {/* Enlace a la Home y scroll a obras */}
+          <Link to="/" className="font-raleway text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-emerald-700 transition-colors">
+            Inicio
+          </Link>
+
+          {/* Enlace directo a la nueva página de Archivo */}
+          <Link to="/archivo" className="font-raleway text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-emerald-700 transition-colors">
+            Archivo Completo
+          </Link>
+
+          <a href="#contacto" className="font-raleway text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-emerald-700 transition-colors">
+            Contacto
+          </a>
         </div>
-  
-        {/* MENÚ: Muy minimalista, texto pequeño y espaciado */}
-        <div className="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.4em] font-raleway font-semibold text-gray-500">
-          <a href="#" className="hover:text-gray-900 transition-colors">Inicio</a>
-          <a href="#galeria" className="hover:text-gray-900 transition-colors">Galería</a>
-          <a href="#contacto" className="hover:text-gray-900 transition-colors">Contacto</a>
-        </div>
-  
-        {/* BOTÓN: En lugar de un botón sólido, usaremos uno con borde fino (Ghost Button) */}
-        <button className="font-raleway text-[10px] uppercase tracking-[0.3em] border border-gray-200 px-6 py-2 rounded-full hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300">
-          Mensaje
-        </button>
-  
-      </nav>
-    )
-  }
-  
-  export default Navbar
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
