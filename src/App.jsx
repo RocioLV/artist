@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'; 
 import Home from './pages/Home';
-import Archive from './pages/Archive'; // 1. IMPORTA EL ARCHIVO REAL AQUÍ
+import Archive from './pages/Archive'; 
+import About from './pages/About';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             
             {/* 2. AHORA SÍ USARÁ EL COMPONENTE COMPLETO */}
             <Route path="/archivo" element={<Archive />} />
+            <Route path="/sobre-mi" element={<About />} />
           </Routes>
         </main>
 

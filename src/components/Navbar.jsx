@@ -16,9 +16,12 @@ const Navbar = () => {
             Inicio
           </Link>
 
-          {/* Enlace directo a la nueva página de Archivo */}
           <Link to="/archivo" className="font-raleway text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-emerald-700 transition-colors">
             Archivo Completo
+          </Link>
+
+          <Link to="/sobre-mi" className="font-raleway text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-emerald-700 transition-colors">
+            SOBRE MÍ
           </Link>
 
           <a href="#contacto" className="font-raleway text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-emerald-700 transition-colors">

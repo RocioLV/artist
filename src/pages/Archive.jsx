@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { artworksData } from '../data/artworks';
+import { motion, AnimatePresence } from 'framer-motion';
 import ArtCard from '../components/ArtCard';
 
 const Archive = () => {
@@ -45,12 +46,22 @@ const Archive = () => {
 
       {/* Grid de Archivo: Más compacto (3-4 columnas) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
-        {filteredArtworks.map(art => (
-          <div key={art.id} onClick={() => setSelectedArt(art)}>
-            <ArtCard title={art.title} category={art.technique} image={art.mainImage} />
-          </div>
-        ))}
-      </div>
+      <AnimatePresence mode="popLayout">
+    {filteredArtworks.map((art) => (
+      <motion.div
+        key={art.id}
+        layout // Esto hace que las otras tarjetas se deslicen suavemente a su nueva posición
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.9 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        onClick={() => setSelectedArt(art)}
+      >
+        <ArtCard title={art.title} category={art.technique} image={art.mainImage} />
+      </motion.div>
+    ))}
+    </AnimatePresence>
+    </div>
 
       {/* Mensaje si no hay resultados */}
       {filteredArtworks.length === 0 && (
