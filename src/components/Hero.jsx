@@ -1,5 +1,5 @@
 const Hero = () => {
-    const imageId = "192"; 
+    const imageId = "113"; 
     const bgUrl = `https://picsum.photos/id/${imageId}/2560/1440.webp?blur=8`;
   
     return (
@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="relative z-10 text-center px-6">
           
           {/* Nombre: Usamos Serif, bajamos el peso a 'medium' y el tamaño */}
-          <h1 className="font-raleway text-2xl md:text-4xl text-gray-800 font-light tracking-[0.1em] mb-4">
+          <h1 className="font-raleway text-1xl md:text-4xl text-gray-800 font-light tracking-[0.1em] mb-4">
             Rocío <br /> 
             <span className="font-semibold text-emerald-800/80">
               Lorca Villalobos
