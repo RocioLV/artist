@@ -18,15 +18,15 @@ const Hero = () => {
           
           {/* Nombre: Usamos Serif, bajamos el peso a 'medium' y el tamaño */}
           <h1 className="font-raleway text-1xl md:text-4xl text-gray-800 font-light tracking-[0.1em] mb-4">
-            Rocío <br /> 
+            i.am.rocío<br /> 
             <span className="font-semibold text-emerald-800/80">
-              Lorca Villalobos
+            
             </span>
           </h1>
 
           {/* Tagline: Más pequeña, más aire entre letras (tracking-widest) */}
           <p className="font-raleway text-gray-500 text-xs md:text-sm uppercase tracking-[0.4em] mb-12">
-            Artista visual
+            Artista
           </p>
 
           {/* Botón: Menos "pesado", más elegante */}

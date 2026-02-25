@@ -3,8 +3,8 @@ const Navbar = () => {
       <nav className="flex justify-between items-center px-8 py-6 bg-[#F9F9F7]/80 backdrop-blur-md fixed top-0 w-full z-50">
         
         {/* LOGO: Raleway en peso 700 para que destaque sutilmente */}
-        <div className="font-raleway font-bold text-xl tracking-[0.2em] text-gray-900">
-          ROCÍO<span className="text-emerald-600 font-light">LORCA</span>
+        <div className="font-raleway font-semi-bold text-xl tracking-[0.2em] text-gray-900">
+          i<span className="text-emerald-600 font-light">am</span>rocío
         </div>
   
         {/* MENÚ: Muy minimalista, texto pequeño y espaciado */}

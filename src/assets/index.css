@@ -1,10 +1,32 @@
 @import "tailwindcss";
 
-/* Importamos las fuentes desde Google */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syncopate:wght@400;700&display=swap');
+/* 1. Importamos las fuentes: Raleway (Museo) e Inter (Lectura) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* 2. Configuración de Tailwind v4 */
 @theme {
-  /* Registramos las fuentes en el sistema de Tailwind */
-  --font-display: "Syncopate", sans-serif;
+  /* Esto registra las fuentes para usarlas como font-raleway o font-sans */
+  --font-raleway: "Raleway", sans-serif;
   --font-sans: "Inter", sans-serif;
+}
+
+/* 3. Reglas globales de CSS */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F9F9F7;
+  color: #1a1a1a;
+  margin: 0;
+  /* Esto mejora mucho la legibilidad de fuentes delgadas como Raleway */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tip de Senior: Un pequeño reset para las imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
