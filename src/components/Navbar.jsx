@@ -7,7 +7,7 @@ const Navbar = () => {
         
         {/* Logo: Ahora te lleva al inicio siempre */}
         <Link to="/" className="font-raleway text-sm font-bold tracking-[0.3em] text-gray-800">
-          I.AM.ROCÍO
+          deRocío
         </Link>
 
         <div className="flex gap-10">
@@ -21,7 +21,7 @@ const Navbar = () => {
           </Link>
 
           <Link to="/sobre-mi" className="font-raleway text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-emerald-700 transition-colors">
-            SOBRE MÍ
+            Sobre mí
           </Link>
 
           <a href="#contacto" className="font-raleway text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-emerald-700 transition-colors">

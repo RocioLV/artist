@@ -1,18 +1,43 @@
+import { useState } from 'react';
+import Skeleton from './Skeleton';
+
 const ArtCard = ({ title, category, image }) => {
-    return (
-      <div className="group flex flex-col gap-6 cursor-pointer">
-        <div className="relative overflow-hidden bg-white p-2 shadow-sm transition-all duration-700 group-hover:shadow-2xl">
-          <img 
-            src={image} 
-            className="w-full h-auto grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000 ease-in-out scale-100 group-hover:scale-[1.03]"
-          />
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="group relative w-full h-full">
+      {/* 1. El Skeleton: Solo se ve si isLoaded es false */}
+      {!isLoaded && (
+        <div className="aspect-[3/4] w-full">
+           <Skeleton />
         </div>
-        <div className="flex flex-col border-l border-gray-200 pl-4 py-1 ml-2">
-          <h3 className="font-raleway text-[11px] font-bold text-gray-800 uppercase tracking-[0.2em]">{title}</h3>
-          <span className="font-raleway text-[9px] text-gray-400 uppercase tracking-tighter mt-1">{category}</span>
+      )}
+
+      {/* 2. La Imagen: Hidden hasta que carga */}
+      <img
+        src={image}
+        alt={title}
+        onLoad={() => setIsLoaded(true)}
+        className={`
+        w-full h-auto object-cover transition-all duration-1000 ease-in-out
+        ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 absolute top-0 left-0'}
+        group-hover:scale-[1.02]
+      `}
+      />
+
+      {/* Info de la obra */}
+      {isLoaded && (
+        <div className="mt-4">
+          <p className="font-raleway text-[10px] uppercase tracking-widest text-emerald-700">
+            {category}
+          </p>
+          <h3 className="font-raleway text-sm font-light text-gray-800 italic">
+            {title}
+          </h3>
         </div>
-      </div>
-    );
-  };
-  
-  export default ArtCard;
+      )}
+    </div>
+  );
+};
+
+export default ArtCard;
