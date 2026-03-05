@@ -8,7 +8,7 @@ const Hero = () => {
       {/* CAPA 1: Tu Obra con Blur */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-cover bg-center scale-110" // scale-110 evita bordes blancos al usar blur
+          className="absolute inset-0 bg-cover bg-center scale-100" // scale-110 evita bordes blancos al usar blur
           style={{ 
             backgroundImage: `url("${bgUrl}")`,
             filter: 'blur(4px)' // Aquí controlas qué tan sutil es el desenfoque
@@ -16,15 +16,15 @@ const Hero = () => {
         ></div>
 
         {/* CAPA 2: Degradado para fundir con el fondo de la web */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F9F9F7]/20 to-[#F9F9F7]"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#F9F9F7]/20 to-[#F9F9F7]"></div>
       </div>
 
       {/* CAPA 3: Contenido Minimalista */}
       <div className="relative z-10 text-center px-6">
         
         {/* Nombre */}
-        <h1 className="font-raleway text-4xl md:text-6xl text-gray-800 font-light tracking-[0.1em] mb-4">
-          delRocío
+        <h1 className="font-raleway text-3xl md:text-5xl text-gray-00 font-light tracking-widest mb-4">
+          del<span className="font-bold">Rocío</span>
         </h1>
 
         {/* Tagline */}

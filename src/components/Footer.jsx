@@ -4,7 +4,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           
           <div className="font-raleway font-bold text-sm tracking-[0.2em] text-gray-900">
-            ROCÍO<span className="text-emerald-600 font-light">LORCA</span>
+            delRocío<span className="text-emerald-600 font-light">LORCA</span>
           </div>
   
           <div className="text-[10px] font-raleway text-gray-400 uppercase tracking-widest">

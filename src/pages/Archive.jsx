@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { artworksData } from '../data/artworks';
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import ArtCard from '../components/ArtCard';
 
@@ -70,7 +71,7 @@ const Archive = () => {
 
       {/* Reutilizamos el Modal (puedes luego extraerlo a un componente propio para ser más Senior) */}
       {selectedArt && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-gray-900/10 backdrop-blur-md" onClick={() => setSelectedArt(null)}>
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-gray-900/10 backdrop-blur-md" onClick={() => setSelectedArt(null)}>
           <div className="bg-[#F9F9F7] max-w-4xl w-full p-8 md:p-12 shadow-2xl relative grid grid-cols-1 md:grid-cols-2 gap-10" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setSelectedArt(null)} className="absolute top-6 right-6 text-gray-400">✕</button>
             <img src={selectedArt.mainImage} alt={selectedArt.title} className="w-full h-auto shadow-lg" />

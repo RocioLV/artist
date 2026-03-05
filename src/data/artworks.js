@@ -24,11 +24,11 @@ export const artworksData = [
       description: "Exploración cromática..." 
     },
     { 
-      id: 4, title: "Acuarela Barcelona",
-      category: "acuarela", 
-      technique: "acuarela", 
+      id: 4, title: "Sagrada Familia",
+      category: "gouache", 
+      technique: "gouache", 
       featured: true, 
-      mainImage: "/assets/artworks/acuarela-bcn.jpg", 
+      mainImage: "/assets/artworks/gouache-sagradafamilia.jpg", 
       description: "Exploración cromática..." 
     },
     { 
@@ -64,7 +64,7 @@ export const artworksData = [
       description: "Exploración cromática..." 
     },
     { 
-      id: 9, title: "Acuarela Barcelona 2",
+      id: 9, title: "Calles de Barcelona 2",
       category: "acuarela", 
       technique: "acuarela", 
       featured: true, 
@@ -93,6 +93,70 @@ export const artworksData = [
       technique: "tinta", 
       featured: true, 
       mainImage: "/assets/artworks/tinta-retrato.jpg", 
+      description: "Exploración cromática..." 
+    },
+    { 
+      id: 13, title: "Calles de Barcelona",
+      category: "acuarela", 
+      technique: "acuarela", 
+      featured: true, 
+      mainImage: "/assets/artworks/acuarela-bcn.jpg", 
+      description: "Exploración cromática..." 
+    },
+    { 
+      id: 14, title: "Playa",
+      category: "acuarela", 
+      technique: "acuarela", 
+      featured: true, 
+      mainImage: "/assets/artworks/acuarela-playa.jpeg", 
+      description: "Exploración cromática..." 
+    },
+    { 
+      id: 15, title: "Bocetos por las calles",
+      category: "boceto", 
+      technique: "boceto", 
+      featured: true, 
+      mainImage: "/assets/artworks/boceto-alemania.jpeg", 
+      description: "Exploración cromática..." 
+    },
+    { 
+      id: 16, title: "Bocetos por las calles",
+      category: "boceto", 
+      technique: "boceto", 
+      featured: true, 
+      mainImage: "/assets/artworks/boceto-bar.jpeg", 
+      description: "Exploración cromática..." 
+    },
+    { 
+      id: 15, title: "Bocetos por las calles",
+      category: "boceto", 
+      technique: "boceto", 
+      featured: true, 
+      mainImage: "/assets/artworks/boceto-pachuco.jpeg", 
+      description: "Exploración cromática..." 
+    },
+    { 
+      id: 15, title: "Bocetos por las calles",
+      category: "boceto", 
+      technique: "boceto", 
+      featured: true, 
+      mainImage: "/assets/artworks/boceto-barcelona.jpeg", 
+      description: "Exploración cromática..." 
+    },
+    { 
+      id: 15, title: "Bocetos por las calles",
+      category: "boceto", 
+      technique: "boceto", 
+      featured: true, 
+      mainImage: "/assets/artworks/boceto-nevermind.jpeg", 
+      description: "Exploración cromática..." 
+    },
+    { 
+      id: 15, title: "Bocetos por las calles",
+      category: "boceto", 
+      technique: "boceto", 
+      featured: true, 
+      mainImage: "/assets/artworks/boceto-alemania.jpeg", 
       description: "Exploración cromática..." 
     },
   ];

@@ -1,6 +1,6 @@
 import Hero from '../components/Hero';
 import Gallery from '../components/Gallery';
-import Contact from '../components/Contact'; // Importamos el contacto
+import Contact from '../components/Contact'; 
 
 const Home = () => {
   return (
