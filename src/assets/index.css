@@ -30,3 +30,13 @@ img {
   height: auto;
   display: block;
 }
+
+@layer components {
+  .section-title {
+    @apply font-raleway text-3xl md:text-5xl font-light italic text-gray-800 mb-6;
+  }
+  
+  .section-subtitle {
+    @apply font-raleway text-xs uppercase tracking-[0.4em] text-gray-400;
+  }
+}

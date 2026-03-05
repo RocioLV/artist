@@ -7,7 +7,7 @@ const Navbar = () => {
         
         {/* Logo: Ahora te lleva al inicio siempre */}
         <Link to="/" className="font-raleway text-sm font-bold tracking-[0.3em] text-gray-800">
-          deRocío
+          delRocío
         </Link>
 
         <div className="flex gap-10">

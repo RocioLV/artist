@@ -25,8 +25,8 @@ const Archive = () => {
       
       {/* Título de la Sección */}
       <header className="mb-20">
-        <h1 className="font-raleway text-5xl md:text-7xl font-light italic text-gray-800 mb-6">Archivo</h1>
-        <p className="font-raleway text-xs uppercase tracking-[0.4em] text-gray-400">Colección completa por técnica</p>
+        <h1 className="section-title">Archivo</h1>
+        <p className="section-subtitle">Colección completa por técnica</p>
       </header>
 
       {/* Barra de Filtros */}
@@ -65,7 +65,7 @@ const Archive = () => {
 
       {/* Mensaje si no hay resultados */}
       {filteredArtworks.length === 0 && (
-        <p className="text-center font-raleway text-gray-400 py-20">No hay obras en esta categoría aún.</p>
+        <p className="section-subtitle">No hay obras en esta categoría aún.</p>
       )}
 
       {/* Reutilizamos el Modal (puedes luego extraerlo a un componente propio para ser más Senior) */}
@@ -77,7 +77,7 @@ const Archive = () => {
             <div className="flex flex-col justify-center gap-4">
               <span className="font-raleway text-[10px] text-emerald-700 font-bold uppercase tracking-widest">{selectedArt.technique}</span>
               <h3 className="font-raleway text-3xl font-light italic text-gray-800">{selectedArt.title}</h3>
-              <p className="font-raleway text-sm text-gray-500 leading-relaxed">{selectedArt.description}</p>
+              <p className="section-subtitle">{selectedArt.description}</p>
             </div>
           </div>
         </div>

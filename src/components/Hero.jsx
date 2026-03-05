@@ -11,7 +11,7 @@ const Hero = () => {
           className="absolute inset-0 bg-cover bg-center scale-110" // scale-110 evita bordes blancos al usar blur
           style={{ 
             backgroundImage: `url("${bgUrl}")`,
-            filter: 'blur(6px)' // Aquí controlas qué tan sutil es el desenfoque
+            filter: 'blur(4px)' // Aquí controlas qué tan sutil es el desenfoque
           }}
         ></div>
 
@@ -24,7 +24,7 @@ const Hero = () => {
         
         {/* Nombre */}
         <h1 className="font-raleway text-4xl md:text-6xl text-gray-800 font-light tracking-[0.1em] mb-4">
-          deRocío
+          delRocío
         </h1>
 
         {/* Tagline */}
